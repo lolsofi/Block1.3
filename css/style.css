@@ -40,6 +40,10 @@ h1{
   margin-bottom: 24px;
 }
 
+a{
+  text-decoration: none;
+}
+
 
 
 .nav {
@@ -88,27 +92,6 @@ h1{
   display: none;
 }
 
-
-
-
-@media (min-width: 1200px) {
-  .nav__text--hidden{
-    display: block;
-  }
-
-  .nav::after{
-    content: '';
-    position: absolute;
-    border-bottom: none;
-  }
-
-  .menu{
-    display: flex;
-    overflow: scroll;
-    align-items: center;
-  }
-}
-
 .services{
   background-color: #F8F8F8;
 }
@@ -116,6 +99,7 @@ h1{
 .services__h1{
   position: relative;
 }
+
 .services__h1::before{
   content: '';
   position: absolute;
@@ -128,12 +112,12 @@ h1{
 
 .menu{
   display: flex;
+  overflow: scroll;
   align-items: center;
 }
 
 .menu__item{
   display: inline-block;
-  text-decoration: none;
   color: #7E7E82;
   font-size: 16px;
   line-height: 24px;
@@ -149,8 +133,12 @@ h1{
   padding: 6px 13px;
 }
 
-.more{
-  text-decoration: none;
+.content-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-wrap__more{
   display: block;
   font-size: 16px;
   line-height: 24px;
@@ -160,16 +148,35 @@ h1{
   margin-left: 8px;
   margin-bottom: 15px;
 }
-.more img{
+.content-wrap__more img{
   padding-right: 16px;
 }
 
-.img-wrap{
+.content-wrap__img-wrap{
   display: block;
   width: auto;
   height: auto;
 }
 
-.img-wrap img{
+.content-wrap__img-wrap img{
   width: 100%;
+}
+
+
+@media (min-width: 992px) {
+  .nav__text--hidden{
+    display: block;
+  }
+
+  .nav::after{
+    content: '';
+    position: absolute;
+    border-bottom: none;
+  }
+
+  .menu{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+  }
 }
