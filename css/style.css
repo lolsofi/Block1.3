@@ -101,6 +101,12 @@ h1{
     position: absolute;
     border-bottom: none;
   }
+
+  .menu{
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+  }
 }
 
 .services{
@@ -122,7 +128,6 @@ h1{
 
 .menu{
   display: flex;
-  overflow: scroll;
   align-items: center;
 }
 

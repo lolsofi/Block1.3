@@ -1,1 +1,1 @@
-<https://lolsofi.github.io/Block1.3/public/>
+<https://lolsofi.github.io/Block1.3/>
