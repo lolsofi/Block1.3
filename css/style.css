@@ -263,6 +263,17 @@ p{
   .content-wrap__text--xl{
     display: none;
   }
+  .section__container{
+    padding: 24px 24px 9px;
+  }
+  .h1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+
+}
 
 
 @media (min-width: 1120px) {
@@ -313,5 +324,9 @@ p{
 
   .content-wrap__descr{
     margin-right: 36px;
+  }
+
+  .section__container{
+    padding: 24px 34px 9px;
   }
 }
