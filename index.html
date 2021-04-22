@@ -9,13 +9,12 @@
 </head>
 <body>
   <div class="body-container">
-
   
     <header class="header header--none">
       <div class="header__container">
       
         <div class="header__left">
-          <h1 class="title-services">Услуги и сервисы</h1>
+          <h1 class="header__title title-services">Услуги и сервисы</h1>
         </div>
       
         <div class="header__right">
@@ -48,9 +47,7 @@
           </a>
         </div>
 
-        
         <div class="header__right">
-
           <button class="btn btn--none btn--margin">
             <img src="./img/acc.svg" alt="">
           </button>
@@ -62,7 +59,6 @@
           </button>
 
           <div class="header__line"></div>
-
           <label class="header__text header__text--none" for="request">Оставить заявку</label>
           <button class="btn btn--margin" id="request">
             <img src="./img/tool.svg" alt="">
@@ -80,39 +76,54 @@
     <section class="services">
       <div class="services__container">
 
-        <h1 class="title-services title-services--none-xl">Услуги и сервисы</h1>
+        <h1 class="services__title title-services title-services--none-xl">Услуги и сервисы</h1>
 
-        <ul class="service-choice services__menu">
-          <li><a href="#" class="service-choice__item service-choice__item--active">Ремонтируемые бренды</a></li>
-          <li><a href="#" class="service-choice__item">Ремонтируемые устройства</a></li>
-          <li><a href="#" class="service-choice__item">Цены на услуги</a></li>
-          <li><a href="#" class="service-choice__item">Адреса сервисных центров</a></li>
-          <li><a href="#" class="service-choice__item">Специальные цены</a></li>
-          <li><a href="#" class="service-choice__item">Отзывы</a></li>
+        <ul class="choice-service services__list">
+
+          <li class="choice-service__item">
+            <a href="#" class="choice-service__link choice-service__link--active">Ремонтируемые бренды</a>
+          </li>
+
+          <li class="choice-service__item">
+            <a href="#" class="choice-service__link">Ремонтируемые устройства</a>
+          </li>
+
+          <li class="choice-service__item">
+            <a href="#" class="choice-service__link">Цены на услуги</a>
+          </li>
+
+          <li class="choice-service__item">
+            <a href="#" class="choice-service__link">Адреса сервисных центров</a>
+          </li>
+
+          <li class="choice-service__item">
+            <a href="#" class="choice-service__link">Специальные цены</a>
+          </li>
+          
+          <li class="choice-service__item">
+            <a href="#" class="choice-service__link">Отзывы</a>
+          </li>
         </ul>
-
     
-        <div class="content-wrap">
-          <div class="content-wrap__description">
-            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+        <div class="content">
+          <div class="content__description">
+            <p class="content__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
 
-            <p class="content-wrap__text content-wrap__text--md">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
+            <p class="content__text content__text--md">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
 
-            <p class="content-wrap__text content-wrap__text--xl">
+            <p class="content__text content__text--xl">
             Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных
             клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-            <button class="btn-more">
-              <img class="btn-more__img" src="./img/arrows.svg" alt="">
-              Читать далее
-            </button>
+
+            <button class="content__more">Читать далее</button>
           </div>
+
+          <img class="content__img" src="./img/company.png" alt="company">
+
         </div>
-
       </div>
-
-      <img class="services__img" src="./img/company.png" alt="company">
     </section>
-    
+
   </div>
 </body>
 </html>
