@@ -27,9 +27,6 @@ body{
   line-height: 18px;
   box-sizing: border-box;
   color: #1B1C21;
-  width: 320px;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-  background: #FFFFFF;
 }
 
 p,
@@ -56,25 +53,34 @@ a{
   text-decoration: none;
 }
 
-.header {
+.mobile-menu__container{
+  width: 320px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  background: #FFFFFF;
+  height: 100%;
+  min-height: 101vh;
+  padding: 19px 24px 32px;
+}
+
+.mobile-header {
   width: 100%;
 }
 
-.header__container{
+.mobile-header__container{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 19px 24px 30px;
+  padding-bottom: 30px;
 }
 
-.header__left,
-.header__right {
+.mobile-header__left,
+.mobile-header__right {
   display: flex;
   align-items: center;
 }
 
-.header__title{
-  margin-bottom: 16px;
+.mobile-header__btn:nth-child(1){
+  margin-right: 16px;
 }
 
 .btn {
@@ -94,60 +100,66 @@ a{
   background-color: #ec3c71;
 }
 
-.btn--margin {
+/* .btn--margin {
   margin-right: 16px;
-}
+} */
 
-.services__list{
+.mobile-menu__navigation{
   padding: 0;
   margin: 0 0 22px 0;
   list-style: none;
 }
 
 
-.choice-service__link{
+.navigation__link{
   display: block;
   font-size: 16px;
   line-height: 24px;
   font-family: 'TTLakes-Medium';
   color: #1B1C21;
-  padding: 16px 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.choice-service__link--active{
+.navigation__link--active{
   color: #7E7E82;
 }
 
-.choice-service__item:first-child::before{
+.navigation__item{
+  position: relative;
+}
+
+.navigation__item:first-child::before{
   content: '';
   position: absolute;
-  top: 98px;
-  left: -1px;
+  top: 11px;
+  left: -24px;
   height: 32px;
   border-left: 4px solid #41F6D7;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.footer__container{
-  padding: 32px 24px;
+.mobile-footer__container{
+  padding-top: 32px;
 }
 
-.footer__btn{
+.mobile-footer__btn{
   margin-bottom: 16px;
+  margin-right: 16px;
 }
 
-.footer__mail,
-.footer__tel{
+.mobile-footer__mail,
+.mobile-footer__tel{
   display: block;
   color: #1B1C21;
 }
-.footer__mail{
+.mobile-footer__mail{
   font-size: 16px;
   font-family: 'TTLakes-Medium';
   margin-bottom: 12px;
 }
 
-.footer__tel{
+.mobile-footer__tel{
   font-size: 24px;
   font-family: 'TTLakes-Bold';
   line-height: 32px;
@@ -155,13 +167,13 @@ a{
   margin-bottom: 40px;
 }
 
-.language{
-  display: block;
+.language__elem{
+  display: inline-block;
   color: #1B1C21;
   font-size: 16px;
   font-family: 'TTLakes-Medium';
 }
 
-.language__ru--active{
+.language__elem--active{
   color: #7E7E82;
 }
