@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'TTLakes-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/TTLakes-Regular.woff) format('woff'),
+  url(../fonts/TTLakes-Regular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'TTLakes-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/TTLakes-Medium.woff) format('woff'),
+  url(../fonts/TTLakes-Medium.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'TTLakes-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url(../fonts/TTLakes-Bold.woff) format('woff'),
+  url(../fonts/TTLakes-Bold.ttf) format('ttf');
+}
+
+body{
+  font-family: 'TTLakes-Regular';
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  color: #1B1C21;
+}
+
+p,
+h1,
+body {
+  margin: 0;
+}
+
+p,
+button,
+a,
+h1 {
+  letter-spacing: 0.2px;
+}
+
+h1{
+  font-family: 'TTLakes-Bold';
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 40px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header__container{
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  padding: 16px 32px;
+}
+.header__title{
+  color: #7E7E82;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+.services{
+  background-color: #F8F8F8;
+}
+
+.services__container{
+  padding: 16px 32px;
+}
+
+.services__items{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.services__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  width: 240px;
+  height: 100%;
+  padding: 20px 16px;
+  margin-right: 32px;
+  margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+.content__more{
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'TTLakes-Medium';
+  color: #1B1C21;
+  margin-left: 16px;
+  margin-bottom: 14px;
+  border: none;
+  background: none;
+}
+
+.content__more::before{
+  content: '';
+  position: absolute;
+  background-image: url(../img/arrows.svg);
+  width: 8px;
+  height: 11px;
+  top: 6px;
+  left: -16px;
+  transform: rotate(180deg);
+}
+
+.content__more:focus{
+  outline: none;
+}
+.content__more:hover{
+  font-weight: bold;
+}
