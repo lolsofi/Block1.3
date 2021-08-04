@@ -19,31 +19,6 @@ const swiperPagination = document.querySelector('.swiper-pagination');
 let mySwiper;
 
 
-// let swiperOptions = {
-//   // Optional parameters
-//   slidesPerView: 1.2,
-//   spaceBetween: 16,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   on: {
-//     init: function () {
-//       console.log('swiper initialized');
-//     },
-//   },
-// };
-
-// let swiperOptions = new Swiper ('.swiper-container', {
-//   // Optional parameters
-//   slidesPerView: 1.2,
-//   spaceBetween: 16,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
-
 
 let createSwiper = function () {
   if (!swiperWrapper.classList.contains('swiper-wrapper')) {
@@ -59,7 +34,7 @@ let createSwiper = function () {
 }
 
 let destroySwiper = function () {
-  if (typeof (mySwiper) != 'undefined') {
+  if (mySwiper) {
     mySwiper.destroy();
     mySwiper = undefined;
   }
