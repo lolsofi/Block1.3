@@ -72,10 +72,10 @@ a{
   padding: 16px 16px 32px;
 }
 
-.swiper-container {
+/* .swiper-container {
   width: 240px;
   height: 90px;
-}
+} */
 
 .brands__list{
   display: flex;
@@ -120,14 +120,19 @@ a{
   line-height: 24px;
   font-family: 'TTLakes-Medium';
   color: #1B1C21;
-  margin-left: 16px;
+  /* margin-left: 16px; */
   margin-bottom: 14px;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.brands__btn-more::before{
+.btn-more__icon{
+  margin-right: 16px;
+  transform: rotate(180deg);
+}
+
+/* .brands__btn-more::before{
   content: '';
   position: absolute;
   background-image: url(../img/arrows.svg);
@@ -136,7 +141,7 @@ a{
   top: 6px;
   left: -16px;
   transform: rotate(180deg);
-}
+} */
 
 @media (min-width: 320px) {
   .brands__item{
@@ -144,14 +149,10 @@ a{
     height: 72px;
     margin: 0 8px 16px;
   }
-  .brands__list{
-    /* overflow-x: scroll; */
+  /* .brands__list{
     flex-wrap: nowrap;
-  }
+  } */
   
-  .brands__list::-webkit-scrollbar {
-    width: 0;
-  }
   .brands__btn-more--none-sm{
     display: none;
   }
@@ -159,10 +160,6 @@ a{
 }
 
 @media (min-width: 576px) {
-  /* .brands__list{
-    overflow-x: none;
-    flex-wrap: wrap;
-  } */
   .brands__btn-more--none-sm{
     display: block;
   }
@@ -175,10 +172,6 @@ a{
   .brands__container{
     padding: 24px 24px;
   }
-  /* .brands__list{
-    overflow-x: none;
-    flex-wrap: wrap;
-  } */
   .brands__item{
     width: 224px;
     height: 72px;
@@ -196,10 +189,6 @@ a{
   .brands__container{
     padding: 24px 32px;
   }
-  /* .brands__list{
-    overflow-x: none;
-    flex-wrap: wrap;
-  } */
   .brands__item{
     width: 240px;
     height: 72px;
