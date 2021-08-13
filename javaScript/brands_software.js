@@ -1,21 +1,21 @@
-// const swiper = new Swiper('.swiper-container', {
-//   slidesPerView: 1.2,
-//   spaceBetween: 16,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   }
-// });
-
-
-const swiper = {
+const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1.2,
   spaceBetween: 16,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   }
-};
+});
+
+
+// const swiper = {
+//   slidesPerView: 1.2,
+//   spaceBetween: 16,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   }
+// };
 
 // function Swiper1 (swiper) {
 //   mySwiper = swiper;
@@ -23,7 +23,6 @@ const swiper = {
 
 
 const swiperContainer = document.querySelector('.swiper-container');
-// const swiperWrapper = document.querySelector('.swiper-wrapper');
 const brandList = document.querySelector('.brands__list');
 const swiperPagination = document.querySelector('.swiper-pagination');
 let mySwiper;
@@ -39,12 +38,20 @@ window.addEventListener('resize', function () {
 
 function resize() {
   if (tablet.matches) {
-    mySwiper = new Swiper1('.swiper-container', swiper);
+    mySwiper = new Swiper(swiper);
   } else{
     mySwiper.destroy();
 
   }
 }
+// function resize() {
+//   if (tablet.matches) {
+//     mySwiper = new Swiper1('.swiper-container', swiper);
+//   } else{
+//     mySwiper.destroy();
+
+//   }
+// }
 
 
 
