@@ -7,7 +7,6 @@ const swiper = new Swiper('.swiper-container', {
   }
 });
 
-
 // const swiper = {
 //   slidesPerView: 1.2,
 //   spaceBetween: 16,
@@ -16,10 +15,6 @@ const swiper = new Swiper('.swiper-container', {
 //     clickable: true,
 //   }
 // };
-
-// function Swiper1 (swiper) {
-//   mySwiper = swiper;
-// }
 
 
 const swiperContainer = document.querySelector('.swiper-container');
@@ -54,69 +49,47 @@ function resize() {
 // }
 
 
-
-
-
-// let createSwiper = function () {
-//   if (!swiperWrapper.classList.contains('swiper-wrapper')) {
-//     swiperWrapper.classList.add('swiper-wrapper');
-//   }
-//   if (swiperWrapper.classList.contains('brands__list')) {
-//     swiperWrapper.classList.remove('brands__list');
-//   }
-//   // if (typeof (mySwiper) == 'undefined') {
-//   //   mySwiper = new Swiper('.swiper-container', swiperOptions);
-//   //   console.log(`initialized + ${mySwiper}`);
-//   // }
-// }
-
-// let destroySwiper = function () {
-//   if (mySwiper) {
-//     mySwiper.destroy();
-//     mySwiper = undefined;
-//   }
-//   if (swiperWrapper.classList.contains('swiper-wrapper')) {
-//     swiperWrapper.classList.remove('swiper-wrapper');
-//   }
-//   if (!swiperWrapper.classList.contains('brands__list')) {
-//     swiperWrapper.classList.add('brands__list');
-//   }
-//   if (!swiperPagination.classList.contains('swiper-pagination')) {
-//     swiperPagination.classList.remove('swiper-pagination');
-//   }
-// }
-
-// let maxSwiperWindow = 768;
-// if (document.body.clientWidth < maxSwiperWindow) {
-//   createSwiper();
-// } else {
-//   destroySwiper();
-// }
-
-
-
-
 const btnMore = document.querySelector('.brands__btn-more');
+const brandsItem = [...document.querySelectorAll('.brands__item')];
+
 document.addEventListener('click', function () {
+
+  if (mobile) {
+    brandList.classList.remove('brands__item--hide')
+  };
   
-  // if (desktop){
-    
-  //   btnMore.classList.remove('brands__btn-more--hide');
-  //   btnMore.textContent = 'Скрыть';
-    
-  // } else {
-  //   btnMore.classList.add('brands__btn-more--hide');
-  //   // btnMore.textContent = 'Скрыть';
+  if (tablet) {
+    for (let i = 6; i < brandsItem.length; i++) {
+      brandsItem[i].classList.toggle('brands__item--hide')
+    }
+    if (btnMore.classList.toggle('brands__btn-more--hide')) {
+      btnMore.textContent = 'Показать все';
+    } else {
+      btnMore.textContent = 'Скрыть';
+    };
 
-  // }
-  if (btnMore.classList.contains('brands__btn-more--hide')){
-    btnMore.classList.remove('brands__btn-more--hide');
-    btnMore.textContent = 'Показать все';
-    
-  } else {
-    btnMore.classList.add('brands__btn-more--hide');
-    // btnMore.textContent = 'Скрыть';
-
+    // if (btnMore.classList.contains('brands__btn-more--hide')){
+    //   btnMore.classList.remove('brands__btn-more--hide');
+    //   btnMore.textContent = 'Показать все';
+      
+    // } else {
+    //   btnMore.classList.add('brands__btn-more--hide');
+    //   btnMore.textContent = 'Скрыть';
+  
+    // }
   }
+
+  if (desktop) {
+    for (let i = 8; i < brandsItem.length; i++) {
+      brandsItem[i].classList.toggle('brands__item--hide')
+    }
+    if (btnMore.classList.toggle('brands__btn-more--hide')) {
+      btnMore.textContent = 'Показать все';
+    } else {
+      btnMore.textContent = 'Скрыть';
+    };
+  }
+ 
+
   
 })
